@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Passa ou Repassa</title>
+</head>
+<body>
+    <div class="container">
+        <div id="professor-card" class="card">
+            <img id="professor-foto" src="" alt="Foto do Professor" />
+            <h2 id="professor-nome"></h2>
+        </div>
+        <div id="pergunta-card" class="card">
+            <div id="pergunta"></div>
+            <div id="opcoes"></div>
+            <div class="button-container">
+                <button id="next-button" style="display: none;">Próxima Pergunta</button>
+            </div>
+            <div id="resultado" class="resultado" style="display: none;"></div> <!-- Mensagem de resultado -->
+        </div>
+    </div>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
