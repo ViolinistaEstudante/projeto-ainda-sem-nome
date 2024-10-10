@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Passa ou Repassa</title>
+    <title>Jogo de Perguntas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="professor-card" class="card">
-            <img id="professor-foto" src="" alt="Foto do Professor" />
-            <h2 id="professor-nome"></h2>
+    <div class="game-container">
+        <div class="professor-info">
+            <img id="professor-photo" src="" alt="Foto do Professor">
+            <h2>A pergunta foi feita pelo professor: <span id="professor-name"></span></h2>
         </div>
-        <div id="pergunta-card" class="card">
-            <div id="pergunta"></div>
-            <div id="opcoes"></div>
-            <div class="button-container">
-                <button id="next-button" style="display: none;">Próxima Pergunta</button>
-            </div>
-            <div id="resultado" class="resultado" style="display: none;"></div> <!-- Mensagem de resultado -->
+        <div class="question-card">
+            <h3 id="question-text">Pergunta</h3>
+            <input type="text" id="answer-input" placeholder="Digite sua resposta">
+            <button id="submit-btn">Responder</button>
+        </div>
+        <div class="result-message" id="result-message"></div>
+        <div class="score-container">
+            <p>Time A: <span id="score-team-a">0</span></p>
+            <p>Time B: <span id="score-team-b">0</span></p>
+        </div>
+        <div class="team-selector">
+            <label>Selecione o time:</label>
+            <select id="team-select">
+                <option value="A">Time A</option>
+                <option value="B">Time B</option>
+            </select>
         </div>
     </div>
-    <script src="dados.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>
