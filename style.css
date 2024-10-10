@@ -1,69 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
 }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
+.game-container {
+    background-color: white;
+    border-radius: 10px;
     padding: 20px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.professor-info {
     margin-bottom: 20px;
 }
 
-#professor-foto {
+.professor-info img {
     width: 100px;
     height: 100px;
-    border-radius: 10%;
-    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
+.question-card {
+    margin-bottom: 20px;
+}
+
+#answer-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #218838;
+}
+
+.score-container {
+    margin-top: 20px;
+}
+
+#score-team-a, #score-team-b {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.team-selector {
+    margin-top: 20px;
+}
+
+#team-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
     margin-top: 10px;
-    display: block; /* Faz com que o botão ocupe a linha inteira */
-    width: 100%; /* Faz com que o botão tenha a largura total */
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#opcoes {
+.result-message {
     margin-top: 20px;
-}
-
-.opcao {
-    margin: 5px 0;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center; /* Centraliza o botão dentro do contêiner */
-}
-
-.resultado {
     font-size: 1.2em;
-    margin-top: 20px;
-}
-
-.correto {
-    color: green;
-}
-
-.erro {
-    color: red;
+    font-weight: bold;
+    color: #d9534f; /* Vermelho para incorreto por padrão */
 }
